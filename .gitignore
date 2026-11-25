@@ -1,0 +1,10 @@
+# Assets internos/proprietários de identidade CI&T (manter locais por padrão)
+.claude/skills/ciandt-pptx/assets/
+
+# Saídas de apresentações e arquivos temporários
+/output/
+/unpacked_work/
+*.pptx
+*.ppt
+*.pdf
+*.tmp
