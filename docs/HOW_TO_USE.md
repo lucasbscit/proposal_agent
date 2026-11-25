@@ -4,6 +4,26 @@ Este guia explica como preparar e conduzir o agente para criar apresentações c
 
 ## 1. Acionar o agente
 
+### No OpenCode
+
+Abra o OpenCode na raiz do repositório e inicie uma conversa escolhendo `ciandt-proposal` na lista de agentes. Para iniciar o fluxo de briefing diretamente, use o comando:
+
+```text
+/nova-proposta [contexto inicial da oportunidade]
+```
+
+Exemplo:
+
+```text
+/nova-proposta Proposta para um banco que quer reduzir o tempo de análise de crédito. O público é a diretoria de operações.
+```
+
+Anexe a oferta e os slides institucionais atualizados à mensagem que invoca o comando; comandos do OpenCode preservam os anexos da conversa. O comando usa o agente `ciandt-proposal` e inicia pelo briefing — não gera a apresentação automaticamente.
+
+As skills ficam em `.claude/skills/` no pacote. OpenCode as descobre como skills de compatibilidade de projeto; mencione `ciandt-proposal` no pedido ou carregue a skill diretamente com `@ciandt-proposal-briefing`, `@ciandt-professional-services-proposal` ou `@ciandt-pptx`.
+
+### No Claude Code
+
 No Claude Code, você pode chamar o agente pelo nome, por exemplo:
 
 ```text

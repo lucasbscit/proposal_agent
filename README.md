@@ -7,6 +7,8 @@ O agente transforma o contexto da oportunidade e uma oferta CI&T selecionada em 
 ## O que está incluído
 
 - **Agente `ciandt-proposal`** — conduz a conversa e coordena as skills.
+- **Agente OpenCode `ciandt-proposal`** — definição nativa em `.opencode/agents/ciandt-proposal.md`.
+- **Comando `/nova-proposta`** — inicia briefing no agente OpenCode com `.opencode/commands/nova-proposta.md`.
 - **`ciandt-proposal-briefing`** — coleta materiais e informações, identifica lacunas e exige aprovação da estrutura e do conteúdo.
 - **`ciandt-professional-services-proposal`** — orienta a narrativa e os limites de conteúdo comercial.
 - **`ciandt-pptx`** — instruções de geração em PowerPoint com identidade CI&T.
@@ -15,7 +17,7 @@ O agente transforma o contexto da oportunidade e uma oferta CI&T selecionada em 
 
 ## Fluxo recomendado
 
-1. Selecione `ciandt-proposal` no Claude Code (ou chame `@ciandt-proposal`).
+1. No OpenCode, selecione `ciandt-proposal` na lista de agentes ou use `/nova-proposta [contexto inicial]`. No Claude Code, selecione o agente ou chame `@ciandt-proposal`.
 2. Anexe, para cada oportunidade, a apresentação **atualizada** da oferta CI&T que será levada e os slides institucionais vigentes.
 3. Informe o problema de negócio, o público e o objetivo da apresentação, além do escopo, prazo e restrições conhecidos.
 4. Responda às perguntas de briefing. O agente deve esclarecer lacunas materiais, não inventar informações.
@@ -32,6 +34,18 @@ Não é necessário ter todas as respostas para iniciar. Porém, a oferta e os s
 - Slides institucionais devem ser mantidos na abertura e não podem ser reescritos sem autorização.
 - A saída inicial é `.pptx` para importar no Google Slides; criação direta no Google Slides não está incluída.
 - **Os assets de marca CI&T não estão neste repositório.** O template, fontes e imagens não foram publicados. Siga [`docs/ASSETS_SETUP.md`](docs/ASSETS_SETUP.md) para adicioná-los localmente se tiver autorização para usá-los.
+
+## Instalação no OpenCode
+
+Clone o repositório e abra o OpenCode na raiz. As skills existentes em `.claude/skills/` são descobertas pelo OpenCode como fonte de compatibilidade de projeto. O agente nativo e o comando já estão em `.opencode/agents/` e `.opencode/commands/`.
+
+Para testar, use `/agents` e selecione `ciandt-proposal`, ou inicie com:
+
+```text
+/nova-proposta oportunidade no setor bancário para reduzir o tempo de análise de crédito
+```
+
+Anexe a oferta atualizada e os slides institucionais na conversa. O comando inicia somente o briefing; não deve pular as aprovações da estrutura e do conteúdo.
 
 ## Instalação no Claude Code
 

@@ -4,6 +4,8 @@
 
 O repositório contém as instruções da skill, mas **não contém o starter PowerPoint CI&T nem o diretório `assets/`**. Eles foram deliberadamente deixados de fora porque podem conter materiais internos/proprietários e não houve confirmação de que podem ser publicados no GitHub.
 
+O OpenCode carrega a skill `ciandt-pptx` do diretório de compatibilidade `.claude/skills/` existente neste repositório; não é necessária uma cópia adicional em `.opencode/skills/`. Os assets listados abaixo devem ser colocados localmente no diretório da skill depois de obtidos por canal autorizado.
+
 Sem esses arquivos e sem os scripts necessários para montar, empacotar e inspecionar apresentações, a skill pode orientar o fluxo e revisar conteúdo, mas não tem por si só todos os recursos para gerar um deck CI&T completo.
 
 ## Para habilitar a geração local
